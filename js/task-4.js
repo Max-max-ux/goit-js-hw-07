@@ -1,23 +1,24 @@
-const counter = {
-  value: 0,
-  increment() {
-    this.value += 1;
-  },
-  decrement() {
-    this.value -= 1;
-  },
-};
+const loginForm = document.querySelector('.login-form');
 
-const btnDecrement = document.querySelector('[data-action="decrement"]');
-const btnIncrement = document.querySelector('[data-action="increment"]');
-const display = document.getElementById('value');
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-btnDecrement.addEventListener('click', () => {
-  counter.decrement();
-  display.textContent = counter.value;
-});
+  const emailInput = loginForm.elements.email;
+  const passwordInput = loginForm.elements.password;
 
-btnIncrement.addEventListener('click', () => {
-  counter.increment();
-  display.textContent = counter.value;
+  const emailValue = emailInput.value.trim();
+  const passwordValue = passwordInput.value.trim();
+
+  if (emailValue === '' || passwordValue === '') {
+    alert('All form fields must be filled in');
+    return;
+  }
+
+  const formData = {
+    email: emailValue,
+    password: passwordValue,
+  };
+
+  console.log(formData);
+  loginForm.reset(); // Очищаємо поля форми
 });
