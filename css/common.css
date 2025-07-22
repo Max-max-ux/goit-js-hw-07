@@ -48,7 +48,7 @@ a {
   max-width: 392px;
 }
 
-.t1-title-list {
+.t1-title {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33;
@@ -57,13 +57,13 @@ a {
   margin-bottom: 16px;
 }
 
-.t1-list-cat {
+.t1-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.t1-item-cat {
+.t1-item {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #2e2f42;
@@ -129,6 +129,7 @@ a {
   flex-direction: column;
   gap: 8px;
 }
+
 .t4-label {
   display: flex;
   flex-direction: column;
@@ -138,12 +139,14 @@ a {
   color: #2e2f42;
   margin-bottom: 8px;
 }
+
 .t4-input {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 360px;
   height: 40px;
 }
+
 .t4-form-btn {
   margin-top: 8px;
   display: block;
@@ -169,6 +172,7 @@ a {
   align-items: center;
   justify-content: center;
 }
+
 .t5-text {
   line-height: 1.5;
   letter-spacing: 0.04em;

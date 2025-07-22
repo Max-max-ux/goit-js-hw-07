@@ -1,4 +1,4 @@
-const images = [
+const galleryItems = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260',
     alt: 'White and Black Long Fur Cat',
@@ -25,14 +25,13 @@ const images = [
   },
 ];
 
-const container = document.querySelector('.gallery');
+const galleryContainer = document.querySelector('.gallery');
 
-const markup = images
+const markup = galleryItems
   .map(
-    image => `<li class="gallery-item">
-<img src="${image.url}" alt="${image.alt}" class="gallery-image"/> 
-</li>`
+    ({ url, alt }) =>
+      `<li class="gallery-item"><img src="${url}" class="gallery-image" alt="${alt}"/></li>`
   )
   .join('');
-  
-  container.insertAdjacentHTML("beforeend", markup);
+
+galleryContainer.insertAdjacentHTML('beforeend', markup);
